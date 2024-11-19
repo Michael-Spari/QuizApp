@@ -5,22 +5,57 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>QuizApp</title>
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <script src="node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
     
 </head>
-<body>
-    <h1>Hallo Welt!</h1>
+<body onload="init()">
+  <nav class="navbar bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">QuizApp</a>
+    </div>
+  </nav>
 
-    <div class="card">
-        <div class="card-body">
-          This is some text within a card body.
+<div class="container">   
+  <div class="card quiz-card">
+    <img src="./img/quizTime.jpg" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title" id="questionText">Frage</h5>
+     
+      <div class="card quiz-answer-card mb-2">
+        <div class="card-body" id="answer_1">
+          Antwort
         </div>
       </div>
 
-    <button class="btn btn-primary">Start Quiz</button>
-    das hier ist ein <a href="quiz.php">Link</a>
-    
-    
+      <div class="card quiz-answer-card mb-2">
+        <div class="card-body" id="answer_2">
+          Antwort
+        </div>
+      </div>
+
+      <div class="card quiz-answer-card mb-2">
+        <div class="card-body" id="answer_3">
+          Antwort
+        </div>
+      </div>
+
+      <div class="card quiz-answer-card mb-2">
+        <div class="card-body"id="answer_4">
+          Antwort
+        </div>
+      </div>
+
+      <div class="question-footer">
+        <span>
+          <b>1</b> von <b id="all-questions"></b> Fragen
+        </span>
+
+        <button class="btn btn-primary">Nächste Frage</button>
+
+    </div>
+  </div>
+</div>
 </body>
 </html>
